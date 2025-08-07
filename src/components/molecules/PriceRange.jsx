@@ -31,7 +31,7 @@ const PriceRange = ({ min, max, value, onChange, step = 1000 }) => {
           <span>${value[1].toLocaleString()}</span>
         </div>
       </div>
-      <style jsx>{`
+<style>{`
         .slider-thumb::-webkit-slider-thumb {
           appearance: none;
           height: 20px;
