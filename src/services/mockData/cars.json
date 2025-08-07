@@ -1,0 +1,262 @@
+[
+  {
+    "Id": 1,
+    "make": "Tesla",
+    "model": "Model S",
+    "year": 2023,
+    "price": 89990,
+    "images": [
+      "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=600&fit=crop"
+    ],
+    "type": "Sedan",
+    "engine": "Electric Dual Motor",
+    "transmission": "Automatic",
+    "mileage": 12500,
+    "color": "Pearl White",
+    "features": [
+      "Autopilot Enabled",
+      "Premium Interior",
+      "Glass Roof",
+      "Heated Seats",
+      "Full Self-Driving Capability",
+      "Over-the-air Updates"
+    ],
+    "inStock": true
+  },
+  {
+    "Id": 2,
+    "make": "BMW",
+    "model": "M4 Competition",
+    "year": 2022,
+    "price": 73995,
+    "images": [
+      "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1621135802920-133df287f89c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&h=600&fit=crop"
+    ],
+    "type": "Coupe",
+    "engine": "3.0L Twin-Turbo I6",
+    "transmission": "8-Speed Automatic",
+    "mileage": 8750,
+    "color": "Storm Bay",
+    "features": [
+      "M Performance Exhaust",
+      "Carbon Fiber Roof",
+      "Adaptive M Suspension",
+      "M Drive Professional",
+      "Harman Kardon Audio",
+      "Wireless Charging"
+    ],
+    "inStock": true
+  },
+  {
+    "Id": 3,
+    "make": "Porsche",
+    "model": "911 Turbo S",
+    "year": 2023,
+    "price": 148900,
+    "images": [
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1564094377-c06e1b1e6e51?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop"
+    ],
+    "type": "Sports Car",
+    "engine": "3.8L Twin-Turbo Flat-6",
+    "transmission": "8-Speed PDK",
+    "mileage": 3200,
+    "color": "Guards Red",
+    "features": [
+      "Sport Chrono Package",
+      "PASM Adaptive Suspension",
+      "Sport Exhaust System",
+      "18-Way Adaptive Sports Seats",
+      "Porsche Communication Management",
+      "Active Aerodynamics"
+    ],
+    "inStock": true
+  },
+  {
+    "Id": 4,
+    "make": "Mercedes-Benz",
+    "model": "G63 AMG",
+    "year": 2022,
+    "price": 156995,
+    "images": [
+      "https://images.unsplash.com/photo-1618843479619-f3d0d81e4d10?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop"
+    ],
+    "type": "SUV",
+    "engine": "4.0L Twin-Turbo V8",
+    "transmission": "9-Speed Automatic",
+    "mileage": 15600,
+    "color": "Obsidian Black",
+    "features": [
+      "AMG Performance Package",
+      "AMG Ride Control",
+      "Burmester Surround Sound",
+      "AMG Track Pace",
+      "Night Package",
+      "Carbon Fiber Interior Trim"
+    ],
+    "inStock": true
+  },
+  {
+    "Id": 5,
+    "make": "Audi",
+    "model": "RS7 Sportback",
+    "year": 2023,
+    "price": 118995,
+    "images": [
+      "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&h=600&fit=crop"
+    ],
+    "type": "Sedan",
+    "engine": "4.0L Twin-Turbo V8",
+    "transmission": "8-Speed Tiptronic",
+    "mileage": 6800,
+    "color": "Nardo Gray",
+    "features": [
+      "RS Dynamic Package",
+      "Quattro All-Wheel Drive",
+      "Bang & Olufsen Premium Sound",
+      "RS Sport Suspension",
+      "Carbon Optic Package",
+      "Virtual Cockpit Plus"
+    ],
+    "inStock": false
+  },
+  {
+    "Id": 6,
+    "make": "Lamborghini",
+    "model": "Huracán EVO",
+    "year": 2022,
+    "price": 249500,
+    "images": [
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&h=600&fit=crop"
+    ],
+    "type": "Sports Car",
+    "engine": "5.2L V10",
+    "transmission": "7-Speed Dual-Clutch",
+    "mileage": 4200,
+    "color": "Arancio Borealis",
+    "features": [
+      "Lamborghini Dinamica Veicolo Integrata",
+      "Performance Traction Control System",
+      "Alcantara Interior",
+      "Lamborghini Infotainment System",
+      "Lifting System",
+      "Carbon Fiber Engine Bay"
+    ],
+    "inStock": true
+  },
+  {
+    "Id": 7,
+    "make": "Ford",
+    "model": "F-150 Raptor",
+    "year": 2023,
+    "price": 68995,
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0e501ba2fe6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1605559911156-d6f52d8c5909?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1551830820-330a71b99659?w=800&h=600&fit=crop"
+    ],
+    "type": "Truck",
+    "engine": "3.5L Twin-Turbo V6",
+    "transmission": "10-Speed Automatic",
+    "mileage": 22400,
+    "color": "Code Orange",
+    "features": [
+      "Fox Racing Shox",
+      "Terrain Management System",
+      "SYNC 4 Infotainment",
+      "B&O Premium Audio",
+      "360-Degree Camera",
+      "Pro Trailer Backup Assist"
+    ],
+    "inStock": true
+  },
+  {
+    "Id": 8,
+    "make": "Chevrolet",
+    "model": "Corvette Stingray",
+    "year": 2022,
+    "price": 65995,
+    "images": [
+      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop"
+    ],
+    "type": "Sports Car",
+    "engine": "6.2L V8",
+    "transmission": "8-Speed Dual-Clutch",
+    "mileage": 9800,
+    "color": "Torch Red",
+    "features": [
+      "Magnetic Ride Control",
+      "Performance Data Recorder",
+      "GT2 Bucket Seats",
+      "Bose Premium Audio",
+      "Carbon Flash Badges",
+      "Z51 Performance Package"
+    ],
+    "inStock": true
+  },
+  {
+    "Id": 9,
+    "make": "McLaren",
+    "model": "720S Spider",
+    "year": 2021,
+    "price": 315000,
+    "images": [
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop"
+    ],
+    "type": "Convertible",
+    "engine": "4.0L Twin-Turbo V8",
+    "transmission": "7-Speed Dual-Clutch",
+    "mileage": 5600,
+    "color": "McLaren Orange",
+    "features": [
+      "Retractable Hard Top",
+      "Proactive Chassis Control",
+      "McLaren Track Telemetry",
+      "Carbon Fiber Monocage",
+      "Adaptive Dampers",
+      "Launch Control"
+    ],
+    "inStock": false
+  },
+  {
+    "Id": 10,
+    "make": "Jeep",
+    "model": "Wrangler Rubicon 4xe",
+    "year": 2023,
+    "price": 54995,
+    "images": [
+      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1605559911156-d6f52d8c5909?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1594736797933-d0e501ba2fe6?w=800&h=600&fit=crop"
+    ],
+    "type": "SUV",
+    "engine": "2.0L Turbo + Electric",
+    "transmission": "8-Speed Automatic",
+    "mileage": 18900,
+    "color": "Sarge Green",
+    "features": [
+      "Plug-in Hybrid System",
+      "Rock-Trac 4WD System",
+      "Front and Rear Dana Axles",
+      "Electronic Sway Bar Disconnect",
+      "Uconnect 4C NAV",
+      "LED Lighting Package"
+    ],
+    "inStock": true
+  }
+]
