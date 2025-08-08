@@ -1,68 +1,94 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 export const useCart = () => {
   const [cartItems, setCartItems] = useState([]);
 
-  // Load cart from localStorage on initialization
+  // Load cart from localStorage on mount
   useEffect(() => {
-    const savedCart = localStorage.getItem("autovault-cart");
-    if (savedCart) {
-      try {
-        setCartItems(JSON.parse(savedCart));
-      } catch (error) {
-        console.error("Error loading cart from localStorage:", error);
-        setCartItems([]);
+    try {
+      const savedCart = localStorage.getItem('autovault-cart');
+      if (savedCart) {
+        const parsedCart = JSON.parse(savedCart);
+        setCartItems(parsedCart);
       }
+    } catch (error) {
+      console.error('Error loading cart from localStorage:', error);
+      toast.error('Failed to load saved cart');
     }
   }, []);
 
-  // Save cart to localStorage whenever it changes
+  // Save cart to localStorage whenever cartItems changes
   useEffect(() => {
-    localStorage.setItem("autovault-cart", JSON.stringify(cartItems));
+    try {
+      localStorage.setItem('autovault-cart', JSON.stringify(cartItems));
+    } catch (error) {
+      console.error('Error saving cart to localStorage:', error);
+      toast.error('Failed to save cart');
+    }
   }, [cartItems]);
 
   const addToCart = (car) => {
+    if (!car || !car.Id) {
+      toast.error('Invalid car data');
+      return;
+    }
+
     setCartItems(prevItems => {
-      const existingItem = prevItems.find(item => item.carId === car.Id);
+      const existingItemIndex = prevItems.findIndex(item => item.Id === car.Id);
       
-      if (existingItem) {
-        return prevItems.map(item =>
-          item.carId === car.Id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
+      if (existingItemIndex >= 0) {
+        // Item already in cart, increase quantity
+        const updatedItems = [...prevItems];
+        updatedItems[existingItemIndex] = {
+          ...updatedItems[existingItemIndex],
+          quantity: updatedItems[existingItemIndex].quantity + 1
+        };
+        return updatedItems;
+      } else {
+        // New item, add to cart
+        return [...prevItems, { ...car, quantity: 1 }];
       }
-      
-      return [...prevItems, {
-        carId: car.Id,
-        car: car,
-        quantity: 1,
-        addedAt: new Date().toISOString()
-      }];
     });
   };
 
   const removeFromCart = (carId) => {
-    setCartItems(prevItems => prevItems.filter(item => item.carId !== carId));
+    if (!carId) {
+      toast.error('Invalid car ID');
+      return;
+    }
+
+    setCartItems(prevItems => {
+      const updatedItems = prevItems.filter(item => item.Id !== carId);
+      const removedItem = prevItems.find(item => item.Id === carId);
+      
+      if (removedItem) {
+        toast.success(`${removedItem.make} ${removedItem.model} removed from cart`);
+      }
+      
+      return updatedItems;
+    });
   };
 
-  const updateQuantity = (carId, quantity) => {
-    if (quantity <= 0) {
+  const updateQuantity = (carId, newQuantity) => {
+    if (!carId || newQuantity < 0) {
+      toast.error('Invalid quantity');
+      return;
+    }
+
+    if (newQuantity === 0) {
       removeFromCart(carId);
       return;
     }
-    
-    setCartItems(prevItems =>
-      prevItems.map(item =>
-        item.carId === carId
-          ? { ...item, quantity: quantity }
-          : item
-      )
-    );
-  };
 
-  const clearCart = () => {
-    setCartItems([]);
+    setCartItems(prevItems => {
+      return prevItems.map(item => {
+        if (item.Id === carId) {
+          return { ...item, quantity: newQuantity };
+        }
+        return item;
+      });
+    });
   };
 
   const getCartItemCount = () => {
@@ -70,7 +96,21 @@ export const useCart = () => {
   };
 
   const getCartTotal = () => {
-    return cartItems.reduce((total, item) => total + (item.car.price * item.quantity), 0);
+    return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+    toast.info('Cart cleared');
+  };
+
+  const isInCart = (carId) => {
+    return cartItems.some(item => item.Id === carId);
+  };
+
+  const getCartItemQuantity = (carId) => {
+    const item = cartItems.find(item => item.Id === carId);
+    return item ? item.quantity : 0;
   };
 
   return {
@@ -78,8 +118,10 @@ export const useCart = () => {
     addToCart,
     removeFromCart,
     updateQuantity,
-    clearCart,
     getCartItemCount,
-    getCartTotal
+    getCartTotal,
+    clearCart,
+    isInCart,
+    getCartItemQuantity
   };
 };
